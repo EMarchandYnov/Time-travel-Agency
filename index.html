@@ -1,51 +1,290 @@
-"html temporaire de remplissage"
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeTravel Agency</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Travel Agency</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header>
-        <h1>TimeTravel Agency</h1>
-        <nav>
-            <ul>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#chat">Agent IA</a></li>
-                <li><a href="#result">Mon Voyage</a></li>
-            </ul>
+    <!-- ===================== HEADER ===================== -->
+    <header id="site-header" role="banner" class="header">
+      <div class="header-container">
+        <a href="#" class="logo" aria-label="Time Travel Agency home">
+          <span class="logo-text">Time Travel Agency</span>
+        </a>
+        <nav aria-label="Primary navigation" class="header-nav">
+          <ul class="nav-list">
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#reservation">Timeline</a></li>
+          </ul>
         </nav>
+        <button class="btn btn-gold" type="button" data-action="scroll-to-reservation">Réservation</button>
+      </div>
     </header>
 
-    <main>
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="hero" class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/videos/Dino-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">VOYAGES TEMPORELS DEPUIS 2025</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line-white">Explorez l'histoire.</span>
+          <span class="hero-title-line-gold">Vivez le passé.</span>
+        </h1>
+        <p class="hero-description">
+          Une technologie exclusive au service d'expériences historiques authentiques.
+          Chaque voyage est une œuvre d'art temporelle.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-gold" type="button" data-action="scroll-to-destinations">Explorer les époques</button>
+          <button class="btn btn-outline" type="button">Consulter un expert</button>
+        </div>
+      </div>
 
-        <section id="hero">
-            <h2>Voyagez à travers le temps</h2>
-            <p>Créez votre aventure temporelle personnalisée.</p>
-        </section>
+      <!-- Floating chatbot button -->
+      <button class="chatbot-toggle" id="chatbot-toggle" type="button" aria-label="Open chatbot" title="Chat Assistant">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" fill="#C9A961" stroke="#000" stroke-width="2"/>
+          <path d="M16 10V22M10 16H22" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </section>
 
-        <section id="destinations">
-            <h2>Destinations</h2>
-        </section>
+    <!-- ===================== DESTINATIONS SECTION ===================== -->
+    <section id="destinations" class="destinations-section">
+      <div class="section-divider"></div>
+      <div class="destinations-container">
+        <header class="destinations-header">
+          <h2 class="destinations-title">Trois époques. Une infinité de moments.</h2>
+          <p class="destinations-subtitle">DESTINATIONS</p>
+        </header>
 
-        <section id="chat">
-            <h2>Agent IA</h2>
-        </section>
+        <div class="destinations-grid">
 
-        <section id="result">
-            <h2>Résultat</h2>
-        </section>
+          <!-- Destination Card 1: Paris 1889 -->
+          <article class="destination-card">
+            <div class="destination-image">
+              <img src="assets/images/Ville1 copy.png" alt="Paris 1889" />
+            </div>
+            <div class="destination-info">
+              <p class="destination-era">Belle Époque</p>
+              <h3 class="destination-name">Paris 1889</h3>
+              <p class="destination-description">
+                Assistez à la construction de la Tour Eiffel et vivez le glamour de l'Exposition Universelle. Promenez-vous dans les boulevards éclairés au gaz et rencontrez l'élite artistique.
+              </p>
+              <div class="destination-meta">
+                <div class="meta-item">
+                  <span class="meta-icon">📅</span>
+                  <span>3-7 Jours</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon">📍</span>
+                  <span>Construction Tour Eiffel</span>
+                </div>
+              </div>
+              <button class="destination-explore" type="button" data-destination="Paris 1889">
+                Explorer <span class="arrow">→</span>
+              </button>
+            </div>
+          </article>
 
-    </main>
+          <!-- Destination Card 2: Période Crétacé -->
+          <article class="destination-card">
+            <div class="destination-image">
+              <img src="assets/images/Dino1 copy.png" alt="Période Crétacé" />
+            </div>
+            <div class="destination-info">
+              <p class="destination-era">66 Millions d'Années</p>
+              <h3 class="destination-name">Période Crétacé</h3>
+              <p class="destination-description">
+                Aventurez-vous dans un monde dominé par les dinosaures. Observez ces créatures magnifiques dans leur habitat naturel depuis nos capsules d'observation temporelles sécurisées.
+              </p>
+              <div class="destination-meta">
+                <div class="meta-item">
+                  <span class="meta-icon">📅</span>
+                  <span>1-3 Jours</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon">📍</span>
+                  <span>Rencontres Dinosaures</span>
+                </div>
+              </div>
+              <button class="destination-explore" type="button" data-destination="Période Crétacé">
+                Explorer <span class="arrow">→</span>
+              </button>
+            </div>
+          </article>
 
-    <footer>
-        <p>Projet Ynov - TimeTravel Agency</p>
+          <!-- Destination Card 3: Florence 1504 -->
+          <article class="destination-card">
+            <div class="destination-image">
+              <img src="assets/images/Ville2 copy.png" alt="Florence 1504" />
+            </div>
+            <div class="destination-info">
+              <p class="destination-era">Renaissance Italienne</p>
+              <h3 class="destination-name">Florence 1504</h3>
+              <p class="destination-description">
+                Côtoyez les génies artistiques. Assistez au dévoilement du David par Michel-Ange, visitez l'atelier de Léonard de Vinci et plongez-vous dans la naissance de la Renaissance.
+              </p>
+              <div class="destination-meta">
+                <div class="meta-item">
+                  <span class="meta-icon">📅</span>
+                  <span>5-10 Jours</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-icon">📍</span>
+                  <span>David de Michel-Ange</span>
+                </div>
+              </div>
+              <button class="destination-explore" type="button" data-destination="Florence 1504">
+                Explorer <span class="arrow">→</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <div class="section-divider"></div>
+    </section>
+
+    <!-- ===================== RESERVATION FORM SECTION ===================== -->
+    <section id="reservation" class="reservation-section">
+      <div class="reservation-container">
+        <header class="reservation-header">
+          <h2 class="reservation-title">
+            <span>Réservez votre </span>
+            <span class="text-gold">voyage temporel</span>
+          </h2>
+          <p class="reservation-subtitle">
+            Remplissez le formulaire ci-dessous pour sécuriser votre passage temporel
+          </p>
+        </header>
+
+        <form class="reservation-form" id="reservation-form" method="post" action="#">
+          <div class="form-grid">
+
+            <!-- Destination Select -->
+            <div class="form-field form-field-full">
+              <label for="destination-select" class="form-label">
+                <span class="label-icon">📍</span>
+                <span>Époque de Destination</span>
+              </label>
+              <select id="destination-select" name="destination" class="form-input form-select" required>
+                <option value="">Sélectionnez votre destination</option>
+                <option value="paris-1889">Paris 1889 - Belle Époque</option>
+                <option value="cretace">Période Crétacé - 66 Millions d'Années</option>
+                <option value="florence-1504">Florence 1504 - Renaissance Italienne</option>
+              </select>
+            </div>
+
+            <!-- Departure Date -->
+            <div class="form-field">
+              <label for="departure-date" class="form-label">
+                <span class="label-icon">📅</span>
+                <span>Date de départ</span>
+              </label>
+              <input type="date" id="departure-date" name="departure_date" class="form-input" placeholder="jj/mm/aaaa" required />
+            </div>
+
+            <!-- Number of Travelers -->
+            <div class="form-field">
+              <label for="travelers-select" class="form-label">
+                <span class="label-icon">👥</span>
+                <span>Nombre de voyageurs</span>
+              </label>
+              <select id="travelers-select" name="travelers" class="form-input form-select" required>
+                <option value="">Sélectionnez</option>
+                <option value="1">1 Voyageur</option>
+                <option value="2" selected>2 Voyageurs</option>
+                <option value="3">3 Voyageurs</option>
+                <option value="4">4 Voyageurs</option>
+                <option value="5+">5+ Voyageurs</option>
+              </select>
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-field">
+              <label for="full-name" class="form-label">Nom complet</label>
+              <input type="text" id="full-name" name="full_name" class="form-input" placeholder="Votre nom" required />
+            </div>
+
+            <!-- Email -->
+            <div class="form-field">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="Votre Email" required />
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-gold form-submit" data-action="submit-reservation">
+            Confirmer la réservation
+          </button>
+
+          <p class="form-legal">
+            En réservant, vous acceptez nos Conditions de Voyage Temporel et Directives de Prévention des Paradoxes
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="site-footer" role="contentinfo" class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3 class="footer-logo">Time Travel Agency</h3>
+          <p class="footer-description">
+            Expériences de voyage temporel premium depuis 2025. Agréé par l'Autorité Temporelle.
+          </p>
+        </div>
+
+        <nav class="footer-nav">
+          <section class="footer-column">
+            <h4 class="footer-column-title">Destinations</h4>
+            <ul class="footer-list">
+              <li><a href="#destinations">Paris 1889</a></li>
+              <li><a href="#destinations">Période Crétacé</a></li>
+              <li><a href="#destinations">Florence 1504</a></li>
+              <li><a href="#destinations">Voir toutes les époques</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h4 class="footer-column-title">Entreprise</h4>
+            <ul class="footer-list">
+              <li><a href="#">À propos</a></li>
+              <li><a href="#">Protocoles de sécurité</a></li>
+              <li><a href="#">Carrières</a></li>
+              <li><a href="#">Presse</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h4 class="footer-column-title">Légal</h4>
+            <ul class="footer-list">
+              <li><a href="#">Politique de confidentialité</a></li>
+              <li><a href="#">Conditions d'utilisation</a></li>
+              <li><a href="#">Directives paradoxes</a></li>
+              <li><a href="#">Assurance temporelle</a></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Time Travel Agency. Toutes les chronologies réservées.
+        </p>
+      </div>
     </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <script type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/chatbot.js"></script>
+  </body>
 </html>
